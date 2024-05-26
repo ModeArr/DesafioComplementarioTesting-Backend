@@ -1,0 +1,87 @@
+paths:
+  /api/cart/:
+    get:
+      summary: get products whit paginations
+      tags:
+        - Cart
+      parameters: 
+        - in: query
+          name: page
+          schema:
+            type: number
+          description: The number of page to return
+        - in: query
+          name: limit
+          schema:
+            type: number
+          description: The number of products to return per page
+        - in: query
+          name: sort
+          schema:
+            type: string
+            enum:
+              - desc
+              - asc 
+              - ascending
+              - descending
+          description: Sort the products by price ascending or descending
+        - in: query
+          name: status
+          schema:
+            type: boolean
+          description: Return the products with the status false or true
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Returns the products with the category is given
+      responses:
+        "200":
+          description: get products pagination with queries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/User"
+        "400":
+          description: error server side
+  /api/cart/{uid}/:
+    get:
+      summary: get user by id
+      tags:
+        - Cart
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          description: id of user
+          schema:
+            $type: ObjectId
+      responses:
+        "200":
+          description: get user by id info
+        "500":
+          description: server side error
+
+components:
+  schemas:
+    Cart:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              product:
+                $ref: '#/components/schemas/Product'
+              quantity:
+                type: number
+      example:
+        _id: 6f38b062-b739
+        first_name: John
+        last_name: Doe
+        email: ejeyd@example.com
+        password: someEncryptedPSW
+        role: admin

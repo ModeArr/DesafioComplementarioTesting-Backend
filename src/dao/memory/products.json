@@ -1,0 +1,103 @@
+[
+  {
+    "title": "Manzana",
+    "description": "Deliciosa manzana jugosa Red Delicious",
+    "price": 245,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fmanzanna.jpeg?alt=media&token=b87f293b-a871-412a-a34f-e812f47df2c8",
+    "stock": 25,
+    "code": "478567",
+    "status": true,
+    "category": "Fruta",
+    "id": 1
+  },
+  {
+    "title": "Pera",
+    "description": "Carnosa y jugosa Pera Miel",
+    "price": 450,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fpera.jpeg?alt=media&token=5da9770b-431a-465c-b0d1-c0c66ac2550f",
+    "stock": 12,
+    "code": "345678",
+    "status": true,
+    "category": "Fruta",
+    "id": 2
+  },
+  {
+    "title": "Cebolla",
+    "description": "La cebolla blanca ayuda a reducir los niveles de colesterol malo y aumenta el colesterol bueno.",
+    "price": 50,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fcebolla.jpeg?alt=media&token=8ac8c261-6a90-4fab-906f-af224955e37b",
+    "stock": 202,
+    "code": "326783",
+    "status": true,
+    "category": "Verdura",
+    "id": 3
+  },
+  {
+    "title": "Aguacate",
+    "description": "El aguacate es una fruta ovalada, de piel fina y rugosa muy característica. Su carne es verde pálido, con una textura cremosa que se asemeja a la mantequilla y si sabor es único, con cierto regusto a nuez.",
+    "price": 800,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Faguacatge.jpeg?alt=media&token=915344de-4e10-42af-805c-c151d2c6136b",
+    "stock": 345,
+    "code": "659802",
+    "status": true,
+    "category": "Fruta",
+    "id": 4
+  },
+  {
+    "title": "Calabacín",
+    "description": "El calabacín es una de las hortalizas que menor aporte calórico tienen. Tiene un alto contenido en agua, lo que lo hace una hortaliza ideal en las dietas de adelgazamiento y con un alto poder diurético.",
+    "price": 50,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fcalabacin.jpeg?alt=media&token=f030f387-c952-4793-b740-8f57ba70c152",
+    "stock": 43,
+    "code": "785268",
+    "status": true,
+    "category": "Verdura",
+    "id": 5
+  },
+  {
+    "title": "Mandarina",
+    "description": "Las mandarinas tienen un alto contenido en fibra y un gran poder antioxidante. Con propiedades antiinflamatorias, ayudan a combatir infecciones de la garganta y a reducir los efectos del resfriado.",
+    "price": 367,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fmandarina.jpeg?alt=media&token=7be933ab-9638-49af-af65-d9453873edda",
+    "stock": 87,
+    "code": "968457",
+    "status": true,
+    "category": "fruta",
+    "id": 6
+  },
+  {
+    "title": "Papa",
+    "description": "Por su alto contenido en hidratos simples, mantiene a raya el azúcar en sangre. Es un gran aporte energético.",
+    "price": 54,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fpapa.jpeg?alt=media&token=f574b83c-6411-4388-89d5-bb83ee547a5e",
+    "stock": 96,
+    "code": "452657",
+    "status": true,
+    "category": "Verdura",
+    "id": 7
+  },
+  {
+    "title": "Plátano",
+    "description": "El plátano es un gran aliado para personas con acidez y úlceras de estómago. Gran aporte de magnesio y potasio, que funciona como relajante muscular y ayudan a prevenir los calambres.",
+    "price": 421,
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fplatano.jpg?alt=media&token=1dc45b35-0dd7-4ed5-ac07-3c76d9ca6d2e",
+    "stock": 854,
+    "code": "632147",
+    "status": true,
+    "category": "Fruta",
+    "id": 8
+  },
+  {
+    "title": "Brócoli",
+    "description": "El Brócoli es otro de los denominados superalimentos, contiene un gran número de nutrientes que le han dado el nombre de “Súper verdura”.",
+    "price": 356,
+    "thumbnail": [
+      "https://firebasestorage.googleapis.com/v0/b/tienda-mastergym.appspot.com/o/Prouctmanager%2Fbrocoli.jpeg?alt=media&token=f785f424-a6d4-49cb-b382-253405c29f64"
+    ],
+    "stock": 89,
+    "code": "584792",
+    "status": true,
+    "category": "Verdura",
+    "id": 9
+  }
+]
