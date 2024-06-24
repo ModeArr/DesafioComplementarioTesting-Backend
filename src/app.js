@@ -50,3 +50,5 @@ app.use(`/${API_PREFIX}/messages`, messagesRoutes)
 app.use(`/${API_PREFIX}/sessions`, sessionRoutes)
 app.use(`/${API_PREFIX}/docs/`, swaggerUi.serve, swaggerUi.setup(specs));
 app.use('/', viewRoutes)
+
+export default app

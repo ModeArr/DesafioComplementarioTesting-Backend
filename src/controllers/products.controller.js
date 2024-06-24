@@ -29,7 +29,7 @@ const getProductsCtrl = async(req, res) => {
 const getProductsByIdCtrl = async(req, res) => {
     const id = req.params.pid
     productService.getProductById(id).then(result => {
-        return res.status(200).json(result);
+        return res.status(200).json(...result);
     }).catch(err => {
         res.status(400).json(err.message)
     })
