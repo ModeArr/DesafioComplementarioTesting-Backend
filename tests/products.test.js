@@ -41,6 +41,26 @@ describe("Products Routes", () => {
                     expect(res.statusCode).toBe(200);
                 })
         })
+        test("payload should return number of product if limit given", async() => {
+            return api.get("/")
+                .query({limit: 3})
+                .expect('Content-Type', /json/)
+                .expect(200)
+                .then((res) => {
+                    expect(res.body.payload.length).toBe(3);
+                })
+        })
+        test("category query should return", async() => {
+            return api.get("/")
+                .query({category: "fruta"})
+                .expect('Content-Type', /json/)
+                .expect(200)
+                .then((res) => {
+                    res.body.payload.forEach(element => {
+                        expect(element.category).toBe("Fruta")
+                    });
+                })
+        })
         test("should return the pagination ", async() => {
             return api.get("/")
             .expect('Content-Type', /json/)
@@ -61,6 +81,7 @@ describe("Products Routes", () => {
                 console.log(res.body)
                 expect(res.body._id).toBe("65cea7d4cf91d8472f0bfbc2")
             })
+        })
     })
 
     describe("Add Product and delete Product", () => {
@@ -79,8 +100,31 @@ describe("Products Routes", () => {
                         .then((res) => {
                             expect(res.body.status).toBe("success")
                         })
+                    })
                 })
-        })
-    })
+            })
 
+    describe("Edit product", () => {
+        test("Edit product name", async() => {
+            return api.put("/65cea75acf91d8472f0bfbbf")
+                .send({field: "title",
+                    edit: "Manzana"
+                })
+                .set("Cookie", cookie)
+                .expect('Content-Type', /json/)
+                .expect(200)
+                .then((res) => {
+                    expect(res.body.product.title).toBe("Manzana");
+                    api.put(`/65cea75acf91d8472f0bfbbf`)
+                        .send({field: "title",
+                            edit: "Manzanota"
+                        })
+                        .set("Cookie", cookie)
+                        .expect('Content-Type', /json/)
+                        .expect(200)
+                        .then((res) => {
+                            expect(res.body.product.title).toBe("Manzanota")
+                        })
+                })
+            })
 })
