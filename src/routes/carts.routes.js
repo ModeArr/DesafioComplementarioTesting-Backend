@@ -10,8 +10,6 @@ import { addCartCtrl,
 
 const router = Router()
 
-router.post("/", authMdw(['PUBLIC']), addCartCtrl)
-
 router.get("/:cid", authMdw(['PUBLIC']), getCartProductsCtrl)
 
 router.post("/:cid/product/:pid", cartMdwPremium, addProductToCartCtrl)

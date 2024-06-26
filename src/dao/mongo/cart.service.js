@@ -62,9 +62,9 @@ class CartServiceManager {
                 const productAdd = await cartsModel.findByIdAndUpdate( idCart,
                 { $push: 
                     { products: { product: idProduct, quantity: 1 } } 
-                })
+                }, {returnDocument: 'after'})
                 .then((res) => {
-                    return `Se agrego el producto con id: ${idProduct} al carrito con id: ${idCart}` 
+                    return res 
                 })
                 .catch((error) => {
                     throw Error(error)
@@ -73,9 +73,9 @@ class CartServiceManager {
             } else {
                 const productAddQuant = await cartsModel.findOneAndUpdate({_id: idCart, 'products.product': idProduct}, {$inc : {
                     'products.$.quantity': 1
-                }})
+                }}, {returnDocument: 'after'})
                 .then((res) => {
-                    return `Se aumento el producto con id: ${idProduct} al carrito con id: ${idCart}`
+                    return res
                 })
                 .catch((error) => {
                     throw Error(error)
@@ -107,7 +107,7 @@ class CartServiceManager {
                     products: {product: idProduct},
                 }})
                 .then((res) => {
-                return `Se borro correctamente del carrito con id:${idCart} el producto con id: ${idProduct}`
+                return res
                 })
                 .catch((error) => {
                 throw Error(error)
@@ -134,11 +134,12 @@ class CartServiceManager {
                 throw Error("Producto no existe")
             }
 
-            const productAddQuant = await cartsModel.findOneAndUpdate({_id: idCart, 'products.product': idProduct}, {$set : {
-                'products.$.quantity': quantity
-            }})
+            const productAddQuant = await cartsModel.findOneAndUpdate({_id: idCart, 'products.product': idProduct},
+                 {$set : {
+                    'products.$.quantity': quantity
+                }}, {returnDocument: 'after'})
             .then((res) => {
-                return `Se ajusto el producto con id: ${idProduct} a la cantidad ${quantity}, esto al carrito con id: ${idCart}`
+                return res
             })
             .catch((error) => {
                 throw Error(error)

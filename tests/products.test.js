@@ -78,7 +78,6 @@ describe("Products Routes", () => {
             .expect('Content-Type', /json/)
             .expect(200)
             .then((res) => {
-                console.log(res.body)
                 expect(res.body._id).toBe("65cea7d4cf91d8472f0bfbc2")
             })
         })
