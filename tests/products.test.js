@@ -7,7 +7,7 @@ const productsRoute = `http://localhost:8080/api/products`
 
 
 const api = await request(`${url}${apiPrefix}/products`)
-const login = request(`${url}${apiPrefix}/sessions`)
+const login = request(`${url}${apiPrefix}/user`)
 
 const userLogin = {
     email: "adminCoder@coder.com",

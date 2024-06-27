@@ -7,8 +7,8 @@ const secret = JWT_SECRET
 
 const logoutUserCtrl = async(req, res) => {
     res.clearCookie('jwt')
-    .status(200)
-    .json({
+    res.status(200).json({
+        status: "ok",
         message: 'You have logged out'
     })
 }

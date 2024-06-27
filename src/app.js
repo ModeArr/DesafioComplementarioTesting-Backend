@@ -6,7 +6,7 @@ import productsRoutes from "./routes/products.routes.js"
 import cartsRoutes from "./routes/carts.routes.js"
 import viewRoutes from "./routes/views.routes.js"
 import messagesRoutes from "./routes/messages.routes.js"
-import sessionRoutes from "./routes/sessions.routes.js"
+import userRoutes from "./routes/user.routes.js"
 import cookieParser from "cookie-parser"
 import initializePassport from "./config/passport.config.js"
 import passport from "passport"
@@ -47,7 +47,7 @@ app.set("io",  io)
 app.use(`/${API_PREFIX}/products`, productsRoutes)
 app.use(`/${API_PREFIX}/carts`, cartsRoutes)
 app.use(`/${API_PREFIX}/messages`, messagesRoutes)
-app.use(`/${API_PREFIX}/sessions`, sessionRoutes)
+app.use(`/${API_PREFIX}/user`, userRoutes)
 app.use(`/${API_PREFIX}/docs/`, swaggerUi.serve, swaggerUi.setup(specs));
 app.use('/', viewRoutes)
 

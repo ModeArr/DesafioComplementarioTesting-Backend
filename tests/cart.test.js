@@ -5,7 +5,7 @@ const url = CLIENT_URL
 const apiPrefix = API_PREFIX
 
 const api = await request(`${url}${apiPrefix}/carts`)
-const login = request(`${url}${apiPrefix}/sessions`)
+const login = request(`${url}${apiPrefix}/user`)
 
 const userLogin = {
     email: "adminCoder@coder.com",

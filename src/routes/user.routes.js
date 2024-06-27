@@ -15,6 +15,7 @@ router.post("/login", passport.authenticate('login', {
 
 router.post("/register", passport.authenticate('register', {
   successRedirect: '/',
+  successFlash: true,
   failureRedirect: '/login',
   failureFlash: true,
   session: false,
