@@ -10,11 +10,22 @@
 
 #### Tutor: Allan Reynoso Naranjo
 
-#### Practica Integradora Proyecto Final Numero 3
+#### Desafio Complementario de Testing
 
-#### El proyecto de integración numero 3 pide hacer un sistema de reset de contrase;na mediante email asi como la crear la logia de un usuer premium el cual peude crear articulos y que solo el admin puede borrarlos
+#### Crear testing basico par enteder en genral el uso de testing. Se creo el testing basico de Cart, Products y Users; esto con Jest y SuperTest.
 
 ---
+## Iniciar proyecto
+Iniciar el servidor primero:
+´´´
+npm run start:dev
+´´´
+
+Iniciar el testing:
+´´´
+npm run test
+´´´
+
 ## Links de vistas
 
 [Vista de todos los productos con paginacion](http://localhost:8080/products)
